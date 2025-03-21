@@ -38,7 +38,6 @@ Simulator ini akan membaca **file JSON eksternal** yang berisi konfigurasi DFA, 
 git clone https://github.com/alvinzanuaputra/dfa-simulator.git
 cd dfa-simulator
 ```
-*(Ganti `username` dengan akun GitHub yang digunakan jika tersedia.)*
 
 ### 2. Jalankan Program
 ```bash
