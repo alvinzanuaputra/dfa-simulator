@@ -1,5 +1,14 @@
 # DFA Simulator
 
+
+| Nama                             | NRP        | Kelas     |
+| -------------------------------- | ---------- | --------- |
+| Alvin Zanua Putra                | 5025231064 | Otomata E |
+| Pramudtya Faiz Ardiansyah        | 5025231108 | Otomata E |
+| Christoforus Indra Bagus Pratama | 5025231124 | Otomata E |
+| Muhammad Azhar Aziz              | 5025231131 | Otomata E |
+
+
 ## Pengaplikasian
 Proyek ini dibuat oleh tim yang terdiri dari **4 orang** untuk mengembangkan **Simulator Deterministic Finite Automaton (DFA)** yang dapat menguji apakah sebuah string diterima atau ditolak berdasarkan aturan DFA yang diberikan dalam format **JSON**.
 
@@ -169,22 +178,28 @@ Status: REJECTED
 
 ---
 
-## Pembagian Tugas Tim (4 Orang)
-| Nama | Tugas |
-|------|------|
-| **Orang 1** | Menyiapkan file JSON (`dfa_config.json`) |
-| **Orang 2** | Menulis fungsi `read_dfa_from_file()` |
-| **Orang 3** | Menulis fungsi `simulate_dfa()` |
-| **Orang 4** | Menjalankan dan menguji program |
+## Overview Output
+
+```bash
+ASUS@ASUSTUF-ALVINZP MINGW64 ~/Desktop/Project/Semester 4/Otomata/W4 (main)
+$ "D:/Data Aplikasi/Python/python.exe" "c:/Users/ASUS/Desktop/Project/Semester 4/Otomata/W4/dfa_simulator.py"
+
+=== SIMULASI DFA ===
+String yang diuji: aa
+Path: q0 → q1 → q1
+Status: REJECTED
+
+ASUS@ASUSTUF-ALVINZP MINGW64 ~/Desktop/Project/Semester 4/Otomata/W4 (main)
+$ "D:/Data Aplikasi/Python/python.exe" "c:/Users/ASUS/Desktop/Project/Semester 4/Otomata/W4/dfa_simulator.py"
+
+=== SIMULASI DFA ===
+String yang diuji: ab
+Path: q0 → q1 → q2
+Status: ACCEPTED
+
+ASUS@ASUSTUF-ALVINZP MINGW64 ~/Desktop/Project/Semester 4/Otomata/W4 (main)
+$
+```
 
 ---
-
-## Pengembangan Lanjutan
-- **Menambahkan input manual**: Agar user bisa memasukkan DFA langsung dari terminal.
-- **Menampilkan grafik DFA**: Menggunakan pustaka seperti `networkx` atau `graphviz`.
-- **Membuat GUI sederhana**: Menggunakan Tkinter atau PyQt untuk interface interaktif.
-
----
-
-## Lisensi
-Proyek ini bersifat open-source dan dapat digunakan untuk keperluan akademik dan pengembangan lebih lanjut.
+# Terima Kasih 🤝🤝
