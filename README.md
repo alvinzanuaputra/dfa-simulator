@@ -149,7 +149,7 @@ if dfa:
 }
 ```
 #### **Input:**
-```console
+```
 python dfa_simulator.py dfa_config.json  
 ```
 #### **Output:**
@@ -178,7 +178,7 @@ Status: ACCEPTED
 }
 ```
 #### **Input:**
-```console
+```
 python dfa_simulator.py dfa_rejected_config.json 
 ```
 #### **Output:**
