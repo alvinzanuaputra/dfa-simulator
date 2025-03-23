@@ -29,7 +29,7 @@ Simulator ini akan membaca **file JSON eksternal** yang berisi konfigurasi DFA, 
 
 ## Persyaratan
 - **Python 3.x**
-- **File konfigurasi DFA dalam format JSON** (`dfa_config.json`)
+- **File konfigurasi DFA dalam format JSON** 
 
 ---
 
@@ -42,7 +42,7 @@ cd dfa-simulator
 
 ### 2. Jalankan Program
 ```bash
-python dfa_simulator.py dfa_config.json
+python dfa_simulator.py <nama_file_json>
 ```
 
 ---
