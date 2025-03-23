@@ -19,9 +19,10 @@ Simulator ini akan membaca **file JSON eksternal** yang berisi konfigurasi DFA, 
 ## Struktur Proyek
 ```
 /dfa-simulator
-│── dfa_simulator.py   # Program utama untuk simulasi DFA
-│── dfa_config.json    # File konfigurasi DFA dalam format JSON
-│── README.md          # Dokumentasi proyek
+│── dfa_simulator.py            # Program utama untuk simulasi DFA
+│── dfa_config.json             # File konfigurasi DFA dalam format JSON
+│── dfa_rejected_config.json    # Contoh File konfigurasi DFA yang Rejected
+│── README.md                   # Dokumentasi proyek
 ```
 
 ---
@@ -41,7 +42,7 @@ cd dfa-simulator
 
 ### 2. Jalankan Program
 ```bash
-python dfa_simulator.py
+python dfa_simulator.py dfa_config.json
 ```
 
 ---
@@ -77,6 +78,7 @@ File **`dfa_config.json`** berisi konfigurasi DFA. Contoh:
 ### `dfa_simulator.py`
 ```python
 import json
+import sys
 
 def read_dfa_from_file(filename):
     """Membaca DFA dari file JSON eksternal."""
@@ -110,9 +112,13 @@ def simulate_dfa(dfa, test_string):
     status = "ACCEPTED" if current_state in dfa["accept_states"] else "REJECTED"
     return f"Path: {' → '.join(path)}\nStatus: {status}"
 
-# Baca DFA dari file eksternal
-dfa_file = "dfa_config.json"
-dfa = read_dfa_from_file(dfa_file)
+# Cek apakah argumen command line telah diberikan
+if len(sys.argv) < 2:
+    print("Usage: python script.py <nama_file_json>")
+    sys.exit(1)
+
+filename = sys.argv[1]
+dfa = read_dfa_from_file(filename)
 
 # Jalankan simulasi jika file berhasil dibaca
 if dfa:
