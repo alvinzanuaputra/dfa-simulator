@@ -148,6 +148,10 @@ if dfa:
     "test_string": "ab"
 }
 ```
+#### **Input:**
+```console
+python dfa_simulator.py dfa_config.json  
+```
 #### **Output:**
 ```
 === SIMULASI DFA ===
@@ -173,6 +177,10 @@ Status: ACCEPTED
     "test_string": "aa"
 }
 ```
+#### **Input:**
+```console
+python dfa_simulator.py dfa_rejected_config.json 
+```
 #### **Output:**
 ```
 === SIMULASI DFA ===
@@ -186,24 +194,19 @@ Status: REJECTED
 ## Overview Output
 
 ```bash
-ASUS@ASUSTUF-ALVINZP MINGW64 ~/Desktop/Project/Semester 4/Otomata/W4 (main)
-$ "D:/Data Aplikasi/Python/python.exe" "c:/Users/ASUS/Desktop/Project/Semester 4/Otomata/W4/dfa_simulator.py"
-
-=== SIMULASI DFA ===
-String yang diuji: aa
-Path: q0 → q1 → q1
-Status: REJECTED
-
-ASUS@ASUSTUF-ALVINZP MINGW64 ~/Desktop/Project/Semester 4/Otomata/W4 (main)
-$ "D:/Data Aplikasi/Python/python.exe" "c:/Users/ASUS/Desktop/Project/Semester 4/Otomata/W4/dfa_simulator.py"
+PS D:\Tugas\26. Otomata E\dfa-simulator> python dfa_simulator.py dfa_config.json
 
 === SIMULASI DFA ===
 String yang diuji: ab
 Path: q0 → q1 → q2
 Status: ACCEPTED
 
-ASUS@ASUSTUF-ALVINZP MINGW64 ~/Desktop/Project/Semester 4/Otomata/W4 (main)
-$
+PS D:\Tugas\26. Otomata E\dfa-simulator> python dfa_simulator.py dfa_rejected_config.json  
+
+=== SIMULASI DFA ===
+String yang diuji: aa
+Path: q0 → q1 → q1
+Status: REJECTED
 ```
 
 ---
