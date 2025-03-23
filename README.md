@@ -48,7 +48,7 @@ python dfa_simulator.py <nama_file_json>
 ---
 
 ## Format Input (JSON)
-File **`dfa_config.json`** berisi konfigurasi DFA. Contoh:
+File **`dfa_config.json`** berisi contoh konfigurasi DFA.
 ```json
 {
     "states": ["q0", "q1", "q2", "q3"],
