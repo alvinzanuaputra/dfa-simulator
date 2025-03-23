@@ -1,4 +1,5 @@
 import json
+import sys
 
 def read_dfa_from_file(filename):
     """Membaca DFA dari file JSON eksternal."""
@@ -32,9 +33,13 @@ def simulate_dfa(dfa, test_string):
     status = "ACCEPTED" if current_state in dfa["accept_states"] else "REJECTED"
     return f"Path: {' → '.join(path)}\nStatus: {status}"
 
-# Baca DFA dari file eksternal
-dfa_file = "dfa_config.json"
-dfa = read_dfa_from_file(dfa_file)
+# Cek apakah argumen command line telah diberikan
+if len(sys.argv) < 2:
+    print("Usage: python script.py <nama_file_json>")
+    sys.exit(1)
+
+filename = sys.argv[1]
+dfa = read_dfa_from_file(filename)
 
 # Jalankan simulasi jika file berhasil dibaca
 if dfa:
